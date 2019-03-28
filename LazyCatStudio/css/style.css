@@ -1,0 +1,355 @@
+@charset "UTF-8";
+* {
+  font-family: "Oswald", "微軟正黑體";
+  position: relative;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #BF511E;
+  text-align: center;
+  color: #eee;
+  font-size: 45px;
+}
+header .logo_area {
+  padding: 250px 0;
+}
+header .logo_area #lazy {
+  top: 5px;
+}
+header .logo_area span {
+  letter-spacing: 10px;
+}
+header .logo_area span img {
+  height: 100px;
+}
+header .logo_area #studio {
+  letter-spacing: 20px;
+  font-size: 30px;
+  bottom: 5px;
+  color: #7D191E;
+}
+header img.margin {
+  position: absolute;
+  right: -250px;
+  bottom: 0px;
+  animation: margin_float 6s infinite;
+}
+@keyframes margin_float {
+  0% {
+    transform: translateY(14px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(14px);
+  }
+}
+section {
+  padding: 80px 0;
+}
+
+#section_about {
+  background-color: #7D191E;
+  color: #F1EDCF;
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+#section_about .container {
+  transform: rotate(10deg);
+}
+#section_about .container h1 {
+  font-size: 80px;
+  padding: 50px 0;
+}
+#section_about .container h3 {
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  padding: 10px 0;
+}
+#section_about .container .shorttext {
+  display: none;
+}
+#section_about .container .h3_text {
+  color: #000;
+  font-weight: bold;
+  padding: 40px 0;
+}
+#section_about .container .col-sm-4 {
+  text-align: center;
+}
+#section_about .container .col-sm-4 button {
+  transform: rotate(4deg);
+}
+#section_about img.cat {
+  position: absolute;
+  bottom: -29px;
+  right: 15px;
+  max-width: 280px;
+  opacity: 0;
+}
+#section_about img.cursor {
+  width: 80px;
+  position: fixed;
+  transform: translate(-10%, -15%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 643px) {
+  section#section_about .container {
+    transform: rotate(0deg);
+  }
+}
+@media screen and (max-width: 684px) {
+  section#section_about .container .row h1, section#section_about .container .row h3 {
+    display: none;
+  }
+  section#section_about .container .row .shorttext {
+    display: block;
+  }
+  section#section_about .container .row #fifthLine {
+    display: block;
+  }
+}
+#section_service {
+  background-color: #F1EDCF;
+}
+#section_service .row .col-sm-4 {
+  text-align: center;
+}
+#section_service .row .col-sm-4 i {
+  font-size: 100px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 576px) {
+  #section_about .cat {
+    display: none;
+  }
+
+  #section_service h1 {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 60px;
+  }
+}
+#section_activity {
+  background-color: #F1EDCF;
+}
+#section_activity h1 {
+  padding-bottom: 25px;
+}
+#section_activity #big:hover {
+  background-size: auto 120%;
+}
+#section_activity .act {
+  cursor: pointer;
+  padding: 0px;
+  overflow: hidden;
+  transition: 1s;
+}
+#section_activity .act:before {
+  content: "";
+  opacity: 0;
+  transition: 1s;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#section_activity .act:hover {
+  background-size: 150%;
+}
+#section_activity .act:hover .act_text {
+  opacity: 1;
+}
+#section_activity .act:hover:before {
+  opacity: 1;
+}
+#section_activity .act .act_text {
+  z-index: 3;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  text-align: center;
+}
+#section_activity .act .act_text .title {
+  white-space: nowrap;
+  font-size: 26px;
+}
+#section_activity .act1 {
+  height: 300px;
+  background-size: auto 100%;
+  background-image: url("https://www.catbehaviorassociates.com/wp-content/uploads/2012/06/Greeting-a-cat-using-proper-cat-etiquette.jpg");
+}
+#section_activity .act2 {
+  height: 150px;
+  background-image: url("https://www.wwwallaboutcats.com/wp-content/uploads/2016/12/Cats-livingroom.jpg");
+  background-size: 95%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#section_activity .act3 {
+  background-size: 95%;
+  background-repeat: no-repeat;
+  height: 150px;
+  background-position: center;
+  background-image: url("https://www.straitstimes.com/sites/default/files/st_20160314_bscat_2135587.jpg");
+}
+#section_activity .act4 {
+  height: 150px;
+  background-size: 97.5%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://m.media-amazon.com/images/M/MV5BZTJjODY2MWQtOGJhZC00MzA2LWIyZjUtMzhiZTgyM2M3ZTZhXkEyXkFqcGdeQXVyODM3ODM2NA@@._V1_SX1777_CR0,0,1777,999_AL_.jpg");
+}
+
+#section_contact {
+  background-color: #BF511E;
+  color: black;
+  overflow: hidden;
+}
+#section_contact p {
+  z-index: 4;
+}
+#section_contact .fence, #section_contact .rightcat, #section_contact .leftcat, #section_contact .middlecat {
+  position: absolute;
+  width: 130px;
+  bottom: -5px;
+}
+#section_contact .rightcat {
+  right: 40px;
+  z-index: 1;
+  transition: 1s;
+}
+#section_contact .middlecat {
+  right: 120px;
+  z-index: 2;
+  transition: 1s;
+}
+#section_contact .leftcat {
+  right: 170px;
+  width: 150px;
+  z-index: 1;
+  transition: 1s;
+}
+#section_contact .fence {
+  width: 250px;
+  bottom: -20px;
+  right: 50px;
+  z-index: 3;
+}
+#section_contact h6 {
+  white-space: nowrap;
+}
+#section_contact .cover {
+  position: absolute;
+  left: -15%;
+  top: 0%;
+  width: 115%;
+  transform: rotate(10deg);
+}
+#section_contact .mail {
+  color: #672c10;
+}
+#section_contact .mailword {
+  left: 10px;
+}
+#section_contact .message {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  letter-spacing: 1px;
+}
+#section_contact .mailbody {
+  background-color: #F1EDCF;
+  transform: translateX(-30px);
+  padding: 20px 35px;
+  width: 100%;
+}
+#section_contact .mailbody .bold {
+  font-weight: 700;
+}
+#section_contact .mailbody input, #section_contact .mailbody textarea {
+  display: block;
+  border: none;
+  padding-left: 3px;
+  border: solid 2px #672c10;
+  background-color: transparent;
+}
+#section_contact .mailbody label {
+  width: 100%;
+}
+#section_contact .mailbody label textarea {
+  width: 100%;
+  height: 200px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  #section_contact textarea {
+    height: 150px !important;
+  }
+  #section_contact label {
+    margin-bottom: 10px;
+  }
+  #section_contact .mailbody {
+    padding: 30px 35px;
+    margin-bottom: 20px;
+    width: 130%;
+    left: -15px;
+  }
+}
+@media screen and (max-width: 576px) {
+  #section_contact .row {
+    transform: rotate(180deg);
+  }
+  #section_contact .mailword {
+    padding-right: 80px;
+    padding-left: 20px;
+    transform: rotate(180deg);
+  }
+  #section_contact .mail {
+    transform: rotate(180deg);
+    padding-top: 100px;
+  }
+  #section_contact .cover {
+    width: 80%;
+    top: 10%;
+    left: 30%;
+  }
+}
+@media screen and (max-width: 576px) and (max-width: 270px) {
+  #section_contact input {
+    width: 100%;
+  }
+}
+footer {
+  background-color: #7D191E;
+  text-align: center;
+  color: #eee;
+  font-size: 45px;
+}
+footer .logo_area {
+  padding: 250px 0;
+}
+footer .logo_area #lazy2 {
+  top: 5px;
+  color: #db9866;
+}
+footer .logo_area span {
+  letter-spacing: 10px;
+  color: #db9866;
+}
+footer .logo_area img {
+  height: 120px;
+}

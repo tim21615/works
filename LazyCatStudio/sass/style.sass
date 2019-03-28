@@ -1,0 +1,400 @@
+$color_white: #F1EDCF
+$color_light_red: #DB9866
+$color_brown: #BF511E
+$color_dark_red: #7D191E
+
+@mixin abcenter
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+
+*
+  font-family: 'Oswald','微軟正黑體'
+  // border: solid 2px 
+  position: relative
+
+// //debug
+// *
+//   border: solid 1px
+// header,section
+//   display: none
+// section#section_contact
+//   display: block
+  
+  
+
+html,body
+  width: 100%
+  overflow-x: hidden
+  
+
+header
+  background-color: $color_brown
+  text-align: center
+  color: #eee
+  font-size: 45px
+  
+  .logo_area
+    padding: 250px 0
+    #lazy
+      top: 5px
+
+    span
+      letter-spacing: 10px
+      
+
+      img
+        height: 100px
+        
+    #studio
+      letter-spacing: 20px
+      font-size: 30px
+      bottom: 5px
+      color: $color_dark_red
+  img.margin
+    position: absolute
+    right: -250px
+    bottom: 0px
+    animation: margin_float 6s infinite
+    // width: 600px
+    
+  @keyframes margin_float
+    0%
+      transform: translateY(14px)
+    50%
+      transform: translateY(2px)
+    100%
+      transform: translateY(14px)
+    
+section
+  padding: 80px 0
+  // font-size: 40px
+  
+#section_about
+  background-color: $color_dark_red
+  color: $color_white
+  padding-top: 100px 
+  padding-bottom: 200px
+  
+  // padding: 80px 0
+  
+  .container
+    transform: rotate(10deg)      
+
+    h1
+      font-size: 80px
+      padding: 50px 0
+      
+    h3
+      font-size: 30px
+      font-weight: 400
+      letter-spacing: 3px
+      padding: 10px 0
+    .shorttext
+      display: none
+    .h3_text
+      color: #000
+      font-weight: bold
+      padding: 40px 0
+      // z-index: 5
+      
+    .col-sm-4
+      text-align: center
+      button
+        transform: rotate(4deg)
+  img.cat
+    position: absolute
+    // max-height: 300px
+    bottom: -29px
+    right: 15px
+    // right: -250px
+    max-width: 280px
+    opacity: 0
+    
+    // z-index: 5
+  img.cursor
+    width: 80px
+    position: fixed
+    transform: translate(-10%,-15%)
+    z-index: 5
+    //讓滑鼠點擊會穿過
+    pointer-events: none
+    
+@media screen and (max-width: 643px)
+  section#section_about
+    .container
+      transform: rotate(0deg)
+    
+@media screen and (max-width: 684px)
+  section#section_about
+    .container
+      .row
+        
+        h1,h3
+          display: none
+        .shorttext
+          display: block
+        #fifthLine
+          display: block
+    
+#section_service
+  background-color: $color_white
+  // background-color: #fff
+  
+  .row
+    .col-sm-4
+      text-align: center
+      i
+        font-size: 100px
+        margin-top: 60px
+        margin-bottom: 30px
+        
+//手機尺寸沒有貓、文字置中
+@media screen and (max-width: 576px)
+  #section_about
+    .cat
+      display: none
+  #section_service
+    h1
+      text-align: center
+      font-size: 60px
+      padding-bottom: 60px
+        
+        
+        
+#section_activity
+  background-color: $color_white
+  .row
+    // margin: 0
+  h1
+    padding-bottom: 25px
+  #big
+    &:hover
+      background-size: auto 120%
+  
+  .act
+    cursor: pointer
+    padding: 0px
+    overflow: hidden
+    transition: 1s
+    &:before
+      content: ""
+      opacity: 0
+      transition: 1s
+      display: block
+      width: 100%
+      height: 100%
+      background-color: rgba(black,0.7)
+    
+    &:hover
+      background-size: 150%
+      .act_text
+        opacity: 1
+      
+      &:before
+        
+        // display: block
+        opacity: 1
+        
+    
+    .act_text
+      z-index: 3
+      +abcenter
+      color: white
+      opacity: 0
+      text-align: center
+      .title
+        white-space: nowrap
+        font-size: 26px
+        
+      // font-size: 20px
+  
+  .act1
+    height: 300px
+    background-size: auto 100%
+    background-image: url("https://www.catbehaviorassociates.com/wp-content/uploads/2012/06/Greeting-a-cat-using-proper-cat-etiquette.jpg")
+  .act2
+    height: 150px
+    background-image: url("https://www.wwwallaboutcats.com/wp-content/uploads/2016/12/Cats-livingroom.jpg")
+    background-size: 95%
+    background-repeat: no-repeat
+    background-position: center 
+  .act3
+    background-size: 95%
+    background-repeat: no-repeat
+    height: 150px
+    background-position: center
+    background-image: url("https://www.straitstimes.com/sites/default/files/st_20160314_bscat_2135587.jpg")
+  .act4
+    height: 150px
+    background-size: 97.5%
+    background-position: center
+    background-repeat: no-repeat
+    background-image: url("https://m.media-amazon.com/images/M/MV5BZTJjODY2MWQtOGJhZC00MzA2LWIyZjUtMzhiZTgyM2M3ZTZhXkEyXkFqcGdeQXVyODM3ODM2NA@@._V1_SX1777_CR0,0,1777,999_AL_.jpg")
+  
+    
+#section_contact
+  background-color: $color_brown
+  color: black
+  overflow: hidden
+  // padding-bottom: 200px
+  p
+    z-index: 4
+  .fence,.rightcat,.leftcat,.middlecat
+    position: absolute
+    width: 130px
+    bottom: -5px
+  .rightcat
+    right: 40px
+    z-index: 1
+    transition: 1s
+  .middlecat
+    right: 120px
+    z-index: 2
+    transition: 1s
+  .leftcat
+    right: 170px
+    width: 150px
+    z-index: 1
+    transition: 1s
+    
+    
+  .fence
+    width: 250px
+    // height: 90px
+    bottom: -20px
+    right: 50px
+    z-index: 3
+   
+  h6
+    white-space: nowrap
+  
+  .cover
+    position: absolute
+    left: -15%
+    top: 0%
+    width: 115%
+    transform: rotate(10deg)
+
+  
+  .mail
+    color: darken($color_brown,20%)
+    // height: 400px
+    
+  .mailword
+    left: 10px
+    
+  .message
+    margin-top: 40px
+    margin-bottom: 60px
+    letter-spacing: 1px
+  .mailbody
+    
+    background-color: $color_white
+    transform: translateX(-30px)
+    padding: 20px 35px
+    width: 100%
+    .bold
+      font-weight: 700
+    
+    input,textarea
+      display: block
+      border: none
+      padding-left: 3px
+      // box-sizing: border-box
+      
+      border: solid 2px darken($color_brown,20%)
+      background-color: transparent
+    label
+      width: 100%
+      
+      input
+        // width: 100%
+      
+      textarea
+        width: 100%
+        height: 200px
+      
+@media screen and (min-width: 576px) and (max-width: 768px)
+  #section_contact
+    textarea
+      height: 150px !important
+    label
+      margin-bottom: 10px
+    .mailbody
+      padding: 30px 35px
+      margin-bottom: 20px
+      width: 130%
+      left: -15px
+      
+@media screen and (max-width: 576px)
+  #section_contact
+    .row
+      transform: rotate(180deg)
+    .mailword
+      padding-right: 80px
+      padding-left: 20px
+      transform: rotate(180deg)
+    .mail
+      transform: rotate(180deg)
+      padding-top: 100px
+    // h1
+    //   padding-top: 60px
+    .cover
+      width: 80%
+      top: 10%
+      left: 30%
+  @media screen and (max-width: 576px)
+    .mailword
+      
+  @media screen and (max-width: 270px)
+    #section_contact
+      input
+        width: 100%
+  
+
+    
+  
+  
+    
+footer
+  background-color: $color_dark_red
+  text-align: center
+  color: #eee
+  font-size: 45px
+  
+  .logo_area
+    padding: 250px 0
+    #lazy2
+      top: 5px
+      color: #db9866
+
+    span
+      letter-spacing: 10px
+      color: #db9866
+      
+
+    img
+      height: 120px
+  
+    
+    
+  
+    
+        
+    
+         
+    
+    
+      
+    
+    
+    
+     
+
+
+
+    
+    
+  
