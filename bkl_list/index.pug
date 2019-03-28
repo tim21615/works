@@ -1,0 +1,48 @@
+#app
+  h1 使用Vue.js計算呈現資訊/v-if
+  h3 實戰博客來排行榜資料轉換Html
+      span
+        img.bkl_icon(src="http://pk.ixpanel.com/images/pk/201108/0824/BOOKS.gif")
+        a(href="https://www.books.com.tw/web/sys_saletopb/books/03/?loc=P_002_004" target="_blank") (連結網址)
+        
+  label 清單模式
+    input(type="checkbox" v-model = "list_mode")
+  span#split |
+  span 顯示定價
+    
+  label(v-for ="(book,index) in books") {{index+1}}
+    input(v-model="book.is_discount"  type = "checkbox")
+  span#split |
+  
+  
+  label 正常模式
+    input(type="radio" name="size" v-model="big_mode" value=false)
+  label 老花模式
+    input(type="radio" name="size" v-model="big_mode" value=true )
+  br
+  br
+     
+    
+  .book(v-for = "book in books" :class="{list: list_mode ,big: big_mode} ")
+    img(:src="book.img")
+    .infos
+      h3.title(v-if="!list_mode")
+        a(:href="book.book_link" target="_blank") {{book.title.substring(0,15)}}
+      h3.title(v-if="list_mode")
+        a(:href="book.book_link" target="_blank") {{book.title}}
+      h4.author 作者:
+        a(:href="book.author_link" target="_blank") {{book.author}}
+        
+      h4.publish(v-if="list_mode") 出版社: {{book.publish}}
+
+      h4.price(v-if = "book.is_discount") 優惠價: 
+        span.red {{book.discount*100}}
+        span 折 
+        span.red {{parseInt(book.price*book.discount)}}
+        span 元
+      h4.price(v-if = "!book.is_discount") 價錢: 
+        span.red {{book.price}}
+        span 元
+      h4.publish(v-if="list_mode") 出版日期: {{book.date}}
+      
+      

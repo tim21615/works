@@ -1,0 +1,308 @@
+$color_sun: #ffbf00
+$color_moon: #ffd633
+$color_text: white
+$color_innertext: #a6a6a6
+$color_background: #0099ff
+$color_bottom: #fff
+$color_cloudsmall: #ccc
+$color_rain: #f2f2f2
+$color_outer: #262626
+
+*
+  // border: solid 1px
+  position: relative
+  font-family: 'Ubuntu','微軟正黑體'
+  color: $color_text
+  // letter-spacing: 3px
+  
+  
+body,html
+  margin: 0px
+  padding: 0px
+  background-color: $color_outer
+  width: 100%
+  height: 100%
+  
+body
+  display: flex
+  justify-content: center
+  align-items: center
+  
+.daybox
+  width: 50%
+  max-width: 400px
+  background-color: $color_background
+  overflow: hidden
+  border-radius: 10px
+  box-shadow: 0px 0px 20px rgba(black,0.3)
+  cursor: pointer
+  
+  .text_area
+    letter-spacing: 3px
+    .temp
+      letter-spacing: 2px
+  
+  &:hover
+    .bottom
+      height: 100px
+      transition-duration: 1s
+    .dayWeather
+      margin-top: 0px
+    #MON
+      opacity: 1
+      transition-duration: 0.5s
+      transition-delay: 1s
+    #TUE
+      opacity: 1
+      transition-duration: 0.5s
+      transition-delay: 1.3s
+    #WED
+      opacity: 1
+      transition-duration: 0.5s
+      transition-delay: 1.6s
+    #THU
+      opacity: 1
+      transition-duration: 0.5s
+      transition-delay: 1.9s
+    #FRI
+      opacity: 1
+      transition-duration: 0.5s
+      transition-delay: 2.2s
+    #SAT
+      opacity: 1
+      transition-duration: 0.5s
+      transition-delay: 2.5s
+    #SUN
+      opacity: 1
+      transition-duration: 0.5s
+      transition-delay: 2.8s
+  
+.top
+  height: 300px
+  cursor: pointer
+  
+  .tempsvg
+    width: 100%
+    z-index: 8
+    opacity: 0.3
+    transition-duration: 1s
+    circle
+      fill: white
+    polyline
+      stroke: white
+      stroke-width: 2px
+      fill: none
+    text
+      opacity: 0
+      fill: white
+      font-size: 10px
+      transform: translateX(-5px)translateY(20px)
+  
+  .moon
+    position: absolute
+    width: 70px
+    height: 70px
+    top: 40px
+    left: 30px
+    background-color: $color_moon
+    border-radius: 100%
+    // transition-duration: 1s
+    // transition-delay: 2s
+    //transition轉換時間都寫在最下面方便管理
+    
+    
+    // background-color: black
+    // display: none
+    .moon1
+      position: absolute
+      width: 75px
+      height: 75px
+      left: 50px
+      top: -50px
+      border-radius: 100%
+      background-color: $color_background
+      animation: moon_change 30s infinite 
+
+    
+  @keyframes moon_change
+    0%
+      left: 50px
+      top: -55px
+    100%
+      left: -60px
+      top: 55px
+      
+  
+  .cloud
+    background-color: white
+    position: absolute
+    right: 50px
+    bottom: 100px
+    width: 110px
+    height: 35px
+    border-radius: 20px
+    box-shadow: 0px 0px 15px rgba(black,0.3)
+    animation: cloudmotion 3s infinite
+    
+    
+    
+      
+    .rain
+      position: absolute
+      width: 1px
+      height: 10px
+      left: 20px
+      top: 20px
+      animation: raindrop 2s infinite linear
+      
+
+    
+    .rain1
+      left: 55px
+      animation-delay: 0.5s
+    .rain2
+      left: 68px
+      animation-delay: 0.1s
+
+    .cloud1
+      position: absolute
+      width: 40px
+      height: 40px
+      left: 53px
+      top: -20px
+      border-radius: 100%
+      background-color: white
+      
+    .cloud2
+      position: absolute
+      width: 50px
+      height: 50px
+      left: 18px
+      top: -30px
+      border-radius: 100%
+      background-color: white
+
+      
+@keyframes cloudmotion
+  0%
+    transform: translateY(0px)
+  50%
+    transform: translateY(-5px)
+  100%
+    transform: translateY(0px)
+  
+@keyframes raindrop
+  0%
+    transform: translateY(0px)
+    opacity: 1
+  100%
+    transform: translateY(50px)
+    opacity: 0
+  
+.bottom
+  background-color: white
+  height: 3px
+  display: flex
+  justify-content: center
+  // border: solid 1px
+  padding-top: 15px
+  transition-delay: 0.3s
+  transition-duration: 0.5s 
+  border-radius: 0 0 10px 10px
+  cursor: pointer
+  box-shadow: 0px 0px 3px rgba(black,0.3)
+  .dayWeather
+    width: calc(100% / 7 - 5px)
+    margin-right: 3px
+    margin-top: 3px
+    opacity: 0
+    transition-duration: 0.3s
+    .day
+      letter-spacing: 2px
+    svg
+      width: 100%
+      height: 50px
+      .sun
+        fill: $color_sun
+        stroke: rgba($color_sun,0.4)
+        stroke-dasharray: 7px
+        stroke-width: 15px
+      .cloud
+        animation: cloudmotion 5s infinite
+        fill: $color_cloudsmall
+      .rain
+        stroke-width: 5px
+        // stroke: black
+        animation: raindrop 2s infinite
+        
+      .rain1
+        animation-delay: 0.5s
+      .rain2
+        animation-delay: 1s
+        
+        
+    .day,.daytemp
+      color: $color_innertext
+      font-size: 8px
+      text-align: center
+      
+  
+.text_area
+  display: inline-block
+  position: absolute
+  bottom: 50px
+  left: 30px
+  
+  
+  .temp
+    font-size: 60px
+  .addr ,.time
+    font-size: 13px
+    opacity: 0.6
+    
+// .cloud,.cloud1,.cloud2
+//   background-color: $color_cloud
+//   fill: $color_cloud
+//   z-index: 5
+  
+.rain
+  background-color: $color_rain
+  fill: $color_rain
+  stroke: $color_rain
+  z-index: 1
+
+#switch
+  &:not(:checked)+.top    
+    .tempsvg:not(text)
+      transition-duration: 1s
+      text
+        opacity: 0
+        transition-delay: 2s
+        transition-duration: 1s
+
+    .moon,.cloud
+      transition-delay: 3s
+      transition-duration: 1s
+
+#switch
+  visibility: hidden
+  
+  &:checked+.top
+    .moon,.cloud
+      opacity: 0.3
+      transition-duration: 1s
+    .tempsvg
+      opacity: 1
+      transition-delay: 2s
+      transition-duration: 1s
+      text
+        opacity: 1
+        transition-delay: 3s
+        transition-duration: 1s
+
+  
+  
+  
+    
+  
+  

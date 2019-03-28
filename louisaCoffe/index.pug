@@ -1,0 +1,91 @@
+nav.navbar.navbar-custom
+  a.navbar-brand(href="#header") 
+    span#l L
+    span#o o
+    span#u u
+    span#i i
+    span#s s
+    span#a a
+  
+  ul.navbar-nav.ml-auto
+    li.nav-item
+      a.nav-link(href="#section_words") 創辦人
+    li.nav-item
+      a.nav-link(href="#section_marketing") 成功關鍵
+    li.nav-item
+      a.nav-link(href="#section_map") 市場區位
+    li.nav-item
+      a.nav-link(href="#section_product") 人氣商品
+    li.nav-item
+      a.nav-link(href="#footer") 投稿
+    
+
+header.jumbotron#header
+  .container
+    img.img-fluid(src="http://www.louisacoffee.co/assets/img/logo-girl-image().png" data-0="position: absolute;transform: scale(1) translateX(-50%);left: 50%;bottom: 46%;opacity: 1" data-10="opacity: 1" data-30="opacity: 0" data-90="transform: scale(0.7) translateX(-50%);left: 12%;bottom: 15%;opacity: 0" data-110="opacity: 1")
+    .title_area(data-50="position: absolute; text-align: center; top: 55%; transform: translateX(-50%) ; left: 50%"  data-90="text-align: left;left: 65%  ")
+      .line(data-120="display: none" data-130="display: block;opacity: 0"  data-150="opacity: 1")
+      h1#name(data-0="white-space: nowrap" data-10="white-space: nowrap") 路易莎 Louisa Coffee
+      hr(data-40="opacity: 1" data-50="opacity: 0")
+      h4(data-125="visibility: hidden;" data-180="visibility: visible;opacity: 0"  data-210="opacity: 1") 學生 x 上班族 x 小資族的最愛
+    
+section#section_words
+  .container
+    .row(data-center-top="transform: translateY(-50px)" data-center="transform: translateY(0px)")
+      .col-md-5.img(data-center-top="opacity: 0;transform: translateX(-50px)" data-center="opacity: 1;transform: translateX(0px)")
+      
+      .col-md-7(data-center-top="opacity: 0;transform: translateX(50px)" data-center="opacity: 1;transform: translateX(0px)")
+        h4 路易莎創辦人 :  「我不是在研究咖啡豆，就是在前往咖啡館的路上。」
+          span (2018.01)
+          
+section#section_marketing(data-center-top="transform: translateY(-50px)" data-center="transform: translateY(0px)")
+  .container-fluid
+    .row     
+      .col-sm-12.title
+          h1(data-bottom-top="transform: translateY(-50px);color:rgb(238, 238, 238)" data-center="transform: translateY(0px);color:rgb(255,220,10)") 路易莎 成功的關鍵
+          
+        
+      .col-sm-12.factors(data-bottom-top="opacity: 0;transform: translateY(30px);color:rgb(238, 238, 238)" data-center="opacity: 1;transform: translateX(0px);color:rgb(255,220,10)")
+        .row
+          .col-sm-4
+            i.fas.fa-coffee
+            h5 高品質咖啡豆
+          .col-sm-4
+            i.fas.fa-dollar-sign
+            h5 價格低廉
+          .col-sm-4
+            i.fas.fa-plug
+            h5 大量插座
+section#section_map(data-center-top="transform: translateY(-50px)" data-center="transform: translateY(0px)")
+  .container
+    .row
+      .col-md-5.map(data-100-bottom="opacity: 0;background-size: 140% auto" data-bottom="opacity: 1;background-size: 200% auto "  data-center="background-size: 290% auto; background-position: 80% 55% ;opacity: 1")
+      //data--100-bottom="opacity: 0 "
+        
+      .col-md-7
+        h1(data-bottom="color:rgb(255,255,255)" data-center="color:rgb(255,220,10)") 市場區位 (Location)
+    
+        h2(data-bottom="opacity: 0;transform:translateX(-15px)" data-center="opacity: 1;transform:translateX(0px)") 1.開在星巴克隔壁 !
+        h2(data-bottom="opacity: 0;transform:translateX(-15px)" data-center="opacity: 1;transform:translateX(0px)") 2.住宅區
+    
+section#section_product
+  .container
+    .row
+      .col-sm-12(data-bottom-top="opacity: 0;transform: translateY(-50px)" data-center="opacity: 1;transform: translateY(0px)")
+        h2(data-bottom-top="transform: translateX(-50px)" data-center="transform: translateX(0px)") 人氣商品
+        hr
+        .owl-carousel
+          
+          img.owl_item(src="http://www.louisacoffee.co/upload/product/20171013_035815.jpg")
+          img.owl_item(src="http://www.louisacoffee.co/upload/product/20171013_040050.jpg")
+          img.owl_item(src="http://www.louisacoffee.co/upload/product/20171013_032202.jpg")
+          img.owl_item(src="http://www.louisacoffee.co/upload/product/20171013_033115.jpg")
+          
+footer.jumbotron#footer
+  .container
+    h1 那，你最喜歡路易莎哪樣商品呢?
+    
+    input(placeholder="小農榛果拿鐵...")
+    
+    br
+    button.btn.btn-light Submit

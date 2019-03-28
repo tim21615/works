@@ -1,0 +1,62 @@
+@charset "UTF-8";
+* {
+  font-family: 微軟正黑體;
+}
+
+body {
+  padding: 30px;
+}
+
+#app > span {
+  margin-right: 10px;
+}
+#app .bkl_icon {
+  width: 100px;
+}
+#app .red {
+  color: #FE2828;
+}
+#app .book {
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  width: 180px;
+  padding: 20px;
+  text-align: center;
+}
+#app .book .title, #app .book .author, #app .book .price, #app .book .publish {
+  margin: 5px;
+}
+#app .book .author a {
+  color: rgba(0, 0, 0, 0.7);
+}
+#app .list {
+  display: block;
+  width: 80%;
+  text-align: left;
+}
+#app .list img {
+  display: inline-block;
+  width: 150px;
+  margin-right: 5px;
+}
+#app .list .infos {
+  display: inline-block;
+  vertical-align: top;
+}
+#app .big {
+  width: 220px;
+}
+#app .big img {
+  width: 220px;
+}
+#app .list.big {
+  width: 80%;
+}
+#app .list.big .infos {
+  margin-top: 30px;
+}
+
+#split {
+  margin: 10px;
+  color: rgba(0, 0, 0, 0.3);
+}

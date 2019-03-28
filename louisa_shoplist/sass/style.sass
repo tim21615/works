@@ -1,0 +1,106 @@
+$color_orange: #ffa31a
+$color_black: #333
+$color_white: #eee
+$color_main: #ff9980
+$color_red: #ff3300
+
+*
+  // border: solid 1px 
+  font-family: 微軟正黑體
+  letter-spacing: 2px
+  position: relative
+  font-weight: 700
+html,body
+  width: 100%
+  height: 100%
+  margin: 0px
+  box-sizing: border-box
+  background-color: #ffc266
+  
+  
+.shoplist
+  // box-shadow: 0px 0px 2px #e6e6e6
+  // width: 500px
+  border: solid 3px $color_black
+  display: inline-block
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+  padding: 20px
+  background-color: #EFEFEF
+  
+  h1
+    background-color: $color_main
+    padding: 20px
+    margin-top: -20px
+    margin-left: -20px
+    margin-right: -20px
+    
+    border-bottom: solid 2px $color_black
+    
+  .add
+    // position: absolute
+    border: solid 2px
+    display: inline-block
+    padding: 4px
+    &:hover
+      cursor: pointer
+      background-color: $color_black
+      color: $color_white
+      border: solid 2px $color_black
+    &:active
+      top: 0.3px
+      left: 0.5px
+  .cart
+    
+    margin-top: 20px
+    li#total_price
+      margin-top: 20px
+      background-color: $color_main
+      .price
+        background-color: transparent
+        // color: red
+    li
+      border: solid 2px
+      margin-top: 10px
+      list-style: none
+      padding: 10px
+      // font-weight: 700
+      // position: relative
+      
+      .price
+        
+        background-color: #ffc266
+        font-weight: 700
+        padding: 2px
+        
+        position: absolute
+        right: 50px
+        
+        &::before 
+          content: "$"
+         
+      .delbtn
+        position: absolute
+        right: 4px
+        top: 12px
+        padding: 0px 5px
+        text-align: center
+        
+        &:hover
+          color: $color_white
+          background-color: $color_red
+          cursor: pointer
+        &:active
+          right: 3.5px
+          top: 12.5px
+  
+.buy
+  border: solid 2px
+  padding: 15px
+  width: 500px
+input
+  border: solid 1px
+  // width: 100px
+

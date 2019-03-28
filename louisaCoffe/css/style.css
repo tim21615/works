@@ -1,0 +1,272 @@
+@charset "UTF-8";
+* {
+  font-family: 微軟正黑體;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: bold;
+}
+
+nav.navbar-custom {
+  min-width: 575px;
+  transition-duration: 0.5s;
+  z-index: 100;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  border-bottom: solid 0.5px rgba(0, 0, 0, 0.5);
+}
+nav.navbar-custom .navbar-brand {
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 5px;
+  transition-duration: 0.8s;
+  padding-left: 10px;
+}
+nav.navbar-custom .navbar-brand span {
+  display: inline-block;
+}
+nav.navbar-custom .navbar-brand:hover {
+  letter-spacing: 10px;
+  transition-duration: 2;
+}
+nav.navbar-custom .navbar-brand:hover span#o {
+  animation: Logo_ani 0.8s 1;
+}
+nav.navbar-custom .navbar-brand:hover span#l, nav.navbar-custom .navbar-brand:hover span#i, nav.navbar-custom .navbar-brand:hover span#s, nav.navbar-custom .navbar-brand:hover span#a {
+  animation: Logo_ani2 0.6s 1;
+}
+nav.navbar-custom .navbar-brand:hover span#l {
+  animation-delay: 0.5s;
+}
+nav.navbar-custom .navbar-brand:hover span#o {
+  animation-delay: 1s;
+}
+nav.navbar-custom .navbar-brand:hover span#u {
+  animation-delay: 1.5s;
+}
+nav.navbar-custom .navbar-brand:hover span#i {
+  animation-delay: 2s;
+}
+nav.navbar-custom .navbar-brand:hover span#s {
+  animation-delay: 2.2s;
+}
+nav.navbar-custom .navbar-brand:hover span#a {
+  animation-delay: 2.4s;
+}
+@keyframes Logo_ani {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+    font-size: 30px !important;
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes Logo_ani2 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+nav.navbar-custom .navbar-nav {
+  flex-direction: row;
+}
+nav.navbar-custom .navbar-nav a.nav-link {
+  color: rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+nav.navbar-custom .navbar-nav .nav-item {
+  padding: 2px 10px;
+}
+
+header.jumbotron {
+  text-align: center;
+  background-color: #F37423;
+  margin-bottom: 0;
+  min-height: 550px;
+}
+header.jumbotron .container img {
+  padding: 20px;
+  left: 50%;
+  bottom: 52%;
+}
+header.jumbotron .container .title_area .line {
+  position: absolute;
+  width: 7px;
+  height: 30px;
+  background-color: #eee;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition-duration: 2s;
+  display: none;
+}
+header.jumbotron .container .title_area h1 {
+  padding-bottom: 5px;
+}
+header.jumbotron .container .title_area hr {
+  width: 100px;
+}
+header.jumbotron .container .title_area h4 {
+  padding-top: 10px;
+  transition-duration: 0.5s;
+}
+
+section {
+  padding: 50px 0;
+}
+
+section#section_words {
+  padding: 100px 0;
+  background-color: #eee;
+}
+section#section_words .container .row .col-md-5.img {
+  background-image: url(https://www.zencosmos.com.tw/wp-content/uploads/2018/10/%E9%9D%92%E5%B9%B4-808x454.jpg);
+  height: 350px;
+  background-size: cover;
+  background-position: 80% center;
+}
+section#section_words .container .row .col-md-7 {
+  padding: 130px 30px;
+}
+section#section_words .container .row .col-md-7 h4 {
+  padding-left: 20px;
+  border-left: solid 5px rgba(0, 0, 0, 0.3);
+}
+section#section_words .container .row .col-md-7 h4 span {
+  font-weight: normal;
+  font-size: 14px;
+  color: #666;
+}
+
+section#section_marketing {
+  text-align: center;
+  color: #F37423;
+  background-image: url(https://pic.pimg.tw/sylvia577/1546657795-2530466955_n.jpg);
+  background-size: cover;
+}
+section#section_marketing .container-fluid {
+  padding: 160px 0;
+}
+section#section_marketing .container-fluid .row .col-sm-12.title {
+  margin-bottom: 0px;
+  font-size: 0;
+}
+section#section_marketing .container-fluid .row .col-sm-12.title h1 {
+  background-color: rgba(0, 0, 0, 0.7);
+  letter-spacing: 5px;
+  padding: 30px 0;
+  transition-duration: 2s;
+}
+section#section_marketing .container-fluid .row .col-sm-12.factors {
+  font-size: 0;
+  top: -8px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+section#section_marketing .container-fluid .row .col-sm-12.factors i {
+  font-size: 30px;
+  padding: 20px 0;
+}
+section#section_marketing .container-fluid .row .col-sm-12.factors h5 {
+  padding-bottom: 20px;
+}
+
+section#section_map {
+  background-color: #F37423;
+  padding: 120px 0;
+}
+section#section_map .col-md-5.map {
+  background-image: url(https://i.imgur.com/Vdm3DnE.png);
+  padding: 160px 0;
+  background-size: 140% auto;
+  background-position: 85% 10%;
+  opacity: 1;
+  background-repeat: no-repeat;
+}
+section#section_map .col-md-7 {
+  padding: 50px;
+  padding-left: 80px;
+  color: white;
+}
+section#section_map .col-md-7 h1 {
+  font-weight: 550;
+  margin-bottom: 40px;
+}
+section#section_map .col-md-7 h2 {
+  font-weight: 400;
+}
+
+section#section_product {
+  padding: 100px 0;
+  background-color: #eee;
+}
+section#section_product .col-sm-12 hr {
+  padding: 15px;
+}
+
+footer.jumbotron {
+  background-color: transparent;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+}
+footer.jumbotron::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  top: 0;
+  left: 0;
+  background-image: url(https://scontent.ftpe6-1.fna.fbcdn.net/v/t31.0-8/22051263_1517621344969085_4116998854961872314_o.jpg?_nc_cat=105&_nc_ht=scontent.ftpe6-1.fna&oh=e86e483fda59243d62588c64c4017436&oe=5CE12644);
+  background-attachment: fixed;
+  background-size: 150% auto;
+  background-position: 0 40px;
+  filter: brightness(1.1);
+  opacity: 0.8;
+  z-index: -1;
+}
+footer.jumbotron .container h1 {
+  padding: 35px 0;
+}
+footer.jumbotron .container input {
+  padding: 0px 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+footer.jumbotron .container button {
+  padding: 10px 0;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-top: 20px;
+  background-color: #ef650d;
+  color: #eee;
+  cursor: pointer;
+  width: 200px;
+  border: 0;
+  box-shadow: 0px 9px 10px -7px #bf510a;
+  transition: 1s;
+}
+footer.jumbotron .container button:hover {
+  background-color: #ffc107;
+  color: #333;
+  letter-spacing: 4px;
+  font-weight: 900;
+  transition-duration: 1s;
+}
