@@ -44,6 +44,7 @@ html, body {
   cursor: pointer;
   border-radius: 3px;
   transition: 1s;
+  z-index: 2;
 }
 .headpic .button:hover {
   background-color: rgba(255, 255, 255, 0.1);
@@ -61,62 +62,88 @@ html, body {
   left: 50%;
   transform: translateX(-50%);
 }
-.headpic .line .resume {
-  position: absolute;
+
+.resume {
+  width: 70%;
   opacity: 0;
-  bottom: -700px;
-  transform: translateX(-50%);
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
   border: solid 2px #eee;
   padding: 20px;
-  height: 650px;
   transition-delay: 3s !important;
   transition: 0.5s;
   margin-bottom: 50px;
   text-align: center;
   margin-bottom: 50px;
 }
-.headpic .line .resume .container {
+.resume .container {
   color: #eee;
 }
-.headpic .line .resume .container > span {
+.resume .container > span {
   letter-spacing: 10px;
 }
-.headpic .line .resume .container .h1 {
+.resume .container .h1 {
   display: inline-block;
 }
-.headpic .line .resume .container .italic {
+.resume .container .italic {
   font-style: italic;
   letter-spacing: 5px;
   font-weight: 100;
 }
-.headpic .line .resume .container .italic > i {
+.resume .container .italic > i {
   transition: 1s;
 }
-.headpic .line .resume .container .info {
+.resume .container .info {
   opacity: 0;
   text-align: left;
   top: -7px;
   transition: 1s;
   padding: 20px 0;
 }
-.headpic .line .resume .container .info > h6 {
+.resume .container .info > h6 {
   letter-spacing: 2px;
-  padding-bottom: 20px;
-  margin-top: 50px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  font-weight: 700;
 }
-.headpic .line .resume .container .info > h6 > span {
-  position: absolute;
+.resume .container .info .dest {
   font-size: 14px;
-  bottom: -10px;
-  right: 0;
+  padding-top: 0;
+  letter-spacing: 1px;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 36px;
   color: #66CC82;
-  font-weight: 800;
+  margin-left: 5px;
+  font-weight: normal;
 }
-.headpic .line .resume .container .info .btnarea {
+.resume .container .info .dest .highlight {
+  font-weight: bold;
+}
+.resume .container .info .dest .big {
+  font-size: 24px;
+}
+.resume .container .info .des {
+  font-size: 14px;
+  display: inline-block;
+  letter-spacing: 1px;
+  transition: 0.5s;
+  line-height: 36px;
+  vertical-align: top;
+}
+.resume .container .info .des .highlight {
+  color: #66CC82;
+  font-weight: bold;
+}
+.resume .container .info .des .big {
+  font-size: 20px;
+}
+.resume .container .info .btnarea {
   height: 80px;
   width: 100%;
 }
-.headpic .line .resume .container .info .btnarea .smallbutton {
+.resume .container .info .btnarea .smallbutton {
   transition: 1s;
   cursor: pointer;
   position: absolute;
@@ -131,14 +158,14 @@ html, body {
   border: solid 2px #eee;
   font-weight: 600;
 }
-.headpic .line .resume .container .info .btnarea #reject {
+.resume .container .info .btnarea #reject {
   background-color: #ff3333;
   right: calc(7% + 150px);
 }
-.headpic .line .resume .container .info .btnarea #reject:hover {
+.resume .container .info .btnarea #reject:hover {
   background-color: red;
 }
-.headpic .line .resume .container .info .btnarea #welcome {
+.resume .container .info .btnarea #welcome {
   background-color: #66CC82;
   width: 130px;
   height: 43px;
@@ -149,16 +176,16 @@ html, body {
   border-radius: 5px;
   color: #333;
 }
-.headpic .line .resume .container .info .btnarea #welcome:hover {
+.resume .container .info .btnarea #welcome:hover {
   background-color: #26733b;
   color: #eee;
 }
-.headpic .line .resume .container .info > span {
+.resume .container .info > span {
   display: inline-block;
   margin-left: 35px;
   margin-bottom: 40px;
 }
-.headpic .line .resume .container .info > span #date {
+.resume .container .info > span #date {
   position: absolute;
   font-size: 12px;
   left: 80%;
@@ -175,29 +202,29 @@ html, body {
     opacity: 0;
   }
 }
-.headpic .line .resume .container .info p {
+.resume .container .info p {
   letter-spacing: 2px;
   margin-left: 45px;
 }
-.headpic .line .resume .container .info .skill .skill_item {
+.resume .container .info .skill .skill_item {
   margin-bottom: 8px;
   color: rgba(238, 238, 238, 0.5);
   font-weight: 100;
   font-size: 15px;
   letter-spacing: 1px;
 }
-.headpic .line .resume .container .info .skill .skill_item:hover {
+.resume .container .info .skill .skill_item:hover {
   color: white;
 }
-.headpic .line .resume .container .info .skill .skill_item:hover .outerbox .innerbox {
+.resume .container .info .skill .skill_item:hover .outerbox .innerbox {
   background-color: #39ac59;
 }
-.headpic .line .resume .container .info .skill .skill_item .outerbox {
+.resume .container .info .skill .skill_item .outerbox {
   width: 100%;
   height: 8px;
   background-color: #4c5262;
 }
-.headpic .line .resume .container .info .skill .skill_item .outerbox .innerbox {
+.resume .container .info .skill .skill_item .outerbox .innerbox {
   position: absolute;
   background-color: #66CC82;
   width: 30%;
@@ -313,7 +340,8 @@ hr {
 }
 
 #hr1 {
-  width: 117%;
+  z-index: 5;
+  width: 100%;
   margin-top: 13px;
 }
 
@@ -326,7 +354,7 @@ hr {
 }
 
 #javascript {
-  width: 45%;
+  width: 60%;
 }
 
 #vue {
@@ -503,6 +531,33 @@ hr {
   margin: 10px 0;
 }
 
+.bgwords3 {
+  position: fixed;
+  transition: 0.5s;
+  box-sizing: border-box;
+  right: 0;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  font-family: 微軟正黑體;
+  letter-spacing: 5px;
+  opacity: 0;
+  border-radius: 20px;
+  padding: 5px 15px;
+  border: solid 2px transparent;
+  cursor: pointer;
+}
+.bgwords3:hover {
+  border: solid 2px rgba(0, 0, 0, 0.7);
+}
+.bgwords3:hover i {
+  font-weight: bold;
+}
+.bgwords3 i {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
 .bgwords1 {
   position: fixed;
   transition: 2s;
@@ -515,10 +570,58 @@ hr {
   color: #eee;
   opacity: 0;
 }
+.bgwords1 .restart {
+  font-family: "Dokdo", cursive, 微軟正黑體;
+  text-align: center;
+  vertical-align: middle;
+  width: 120px;
+  height: 70px;
+  position: absolute;
+  color: #E6AF2E;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  opacity: 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+.bgwords1 .restart:after {
+  position: absolute;
+  bottom: 45%;
+  left: 50%;
+  display: block;
+  content: "v";
+  transform: translateX(-50%) scaleX(1.2) scaleY(0.5);
+}
 
 .brown {
   color: #e0644e;
   letter-spacing: 2px;
   font-weight: bold;
   font-size: 18px;
+}
+
+#noTransit {
+  transition-delay: 0s !important;
+}
+
+#Transit {
+  transition-delay: 5s !important;
+  transition: 0.5s !important;
+}
+
+.Restart_ani {
+  animation: restart_ani 2.5s infinite;
+}
+
+@keyframes restart_ani {
+  0% {
+    opacity: 0;
+    top: 140%;
+  }
+  100% {
+    opacity: 1;
+    top: 180%;
+  }
 }
