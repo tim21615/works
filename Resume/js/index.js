@@ -1,5 +1,17 @@
 $(".restart").click(function(){
-  location.reload();
+  $(".alive").css("opacity","1");
+  $(".alive").css("z-index","7");
+  $(".alive").addClass("addani");
+  $(".bgwords4").css("display","block");
+  $(".bgwords4").css("opacity","1");
+  $(".bgwords1").css("display","none");
+  
+  
+  setTimeout(function(){   
+    location.reload();
+ } , 2000); 
+  
+  
 });
 
 $(".bgwords3").click(function(){
@@ -59,15 +71,23 @@ $("#welcome").click(function(){
    setTimeout(function(){
     
     $(".resume").css("opacity","0");
+     $(".contact").css("display","block");
+    $(".bgwords2").css("display","block");
+    $(".bgwords3").css("display","block");
+    
   },3100);
   
   setTimeout(function(){
+    
     $(".headpic").css("display","none");
     $(".resume").css("display","none");
     $(".contact").css("opacity","1");
     $(".bgwords2").css("opacity","1");
     $(".bgwords3").css("opacity","1");
+    $(".restart").css("display","none");
   },4200);
+  
+  
   
 });
 
@@ -88,6 +108,10 @@ $("#reject").click(function(){
     $(".italic").addClass("lefttop");
     $(".info").addClass("leftbottom");
     $("#hr1").addClass("rightbottom");
+    
+    $(".bgwords3").css("display","none");
+    $(".contact").css("display","none");
+    $(".bgwords2").css("display","none");
   },2500);
   
     setTimeout(function(){
@@ -99,11 +123,12 @@ $("#reject").click(function(){
   setTimeout(function(){
       // $(".headpic").css("transition","2s");
       //$(".headpic").css("opacity","0");
-      $(".resume").css("opacity","0");
+      $(".resume").css("opacity","0");      $(".bgwords1").css("display","block");
       
     },4800);
   
     setTimeout(function(){
+      
       $(".headpic").css("display","none");
       $(".resume").css("display","none");
       $(".bgwords1").css("opacity","1");
@@ -133,6 +158,7 @@ $(".smallbutton").click(function(){
 
 $(".button").click(function(){
   
+  // $(".resume").css("display","block");
   $(".button").css("opacity",'0');
   $(".headpic").css("margin-top","90px");
   $(".line").css("bottom","-55px");

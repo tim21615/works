@@ -8,6 +8,8 @@ $color_reject: #C64029
 .bright
   color: $color_word
 
+
+
 html,body
   width: 100%
   height: 100%
@@ -163,39 +165,44 @@ html,body
           transition: 1s
           cursor: pointer
           position: absolute
-          width: 120px
-          height: 40px
+          // width: 120px
+          // height: 40px
+          padding: 5px 15px
           text-align: center
-          letter-spacing: 1px
+          letter-spacing: 2px
           bottom: 10px
           border-radius: 5px
-          line-height: 40px
-          font-size: 20px
+          // line-height: 40px
+          font-size: 18px
           border: solid 2px #eee
           font-weight: 600
         #reject
-          background-color: lighten(red,10%)
-
-
-          right: calc(7% + 150px)
+          
+          right: calc(5% + 180px)
+          
+          background-color: lighten(red,13%)
+          color: #333
 
           &:hover
-            background-color: red
+            background-color: lighten(red,6%)
+            color: #ccc
+            
 
         #welcome
 
           background-color: $color_word
-          width: 130px
-          height: 43px
-          line-height: 43px
+          // width: 130px
+          // height: 43px
+          // line-height: 43px
           font-weight: 900
           bottom: 10px
-          right: 7%
+          right: 5%
           border-radius: 5px
           color: #333
+          padding: 5px 30px
           // z-index: 5
           &:hover
-            background-color: darken(#66CC82,30%)
+            background-color: darken(#66CC82,15%)
             color: #eee
 
 
@@ -474,6 +481,7 @@ hr
   top: 30px
   font-size: 16px
   opacity: 0
+  display: none
   i
     font-size: 60px
     span
@@ -488,6 +496,7 @@ hr
   font-family: 微軟正黑體
   letter-spacing: 5px
   opacity: 0
+  display: none
   i,span
     font-size: 20px
     margin: 10px 0
@@ -503,6 +512,8 @@ hr
   font-family: 微軟正黑體
   letter-spacing: 5px
   opacity: 0
+  //
+  display: none
   border-radius: 20px
   padding: 5px 15px
   border: solid 2px transparent
@@ -531,11 +542,14 @@ hr
   letter-spacing: 5px
   color: #eee
   opacity: 0
+  display: none
+  text-align: center
+  
   .restart
-    font-family: 'Dokdo', cursive,微軟正黑體
+    // font-family: 'Dokdo', cursive,微軟正黑體
     text-align: center
     vertical-align: middle
-    width: 120px
+    // width: 120px
     height: 70px
     position: absolute
     color: #E6AF2E
@@ -545,11 +559,14 @@ hr
     font-size: 20px
     opacity: 0
     font-weight: bold
+    white-space: nowrap
     cursor: pointer
     &:after
+      font-family: 'Dokdo', cursive,微軟正黑體
       position: absolute
-      bottom: 45%
+      bottom: 25%
       left: 50%
+      width: 100%
       
       display: block
       content: 'v'
@@ -580,6 +597,41 @@ hr
   100%
     opacity: 1
     top: 180%
+  
+.bgwords4
+  font-family: 微軟正黑體
+  color: #ccc
+  position: fixed
+  transition: 2s
+  left: 50%
+  top: 30px
+  font-size: 20px
+  font-weight: bold
+  transform: translateX(-50%)
+  letter-spacing: 2px
+  opacity: 0
+  display: none
+  // animation: rotateA 1.3s infinite
+  
+.alive
+  height: 80%
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  transition: 1s
+  opacity: 0
+  // display: none
+  // z-index: 6
+  
+.addani
+  animation: normal_ani 1s 1
+  
+@keyframes normal_ani
+  0%
+    top: 60%
+  100%
+    top: 50%
 
   
   
